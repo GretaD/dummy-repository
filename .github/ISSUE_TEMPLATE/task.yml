@@ -1,14 +1,13 @@
 name: Task Report
 description: Create new meta task
-title: " "
+title: "[Task]: "
 labels: ["task", "to develop"]
 assignees:
   - octocat
 body:
   - type: markdown
     attributes:
-      value: |
-        Please list the tasks on the form below.
+      value: Please list the tasks on the form below.
   - type: input
     id: contact
     attributes:
@@ -39,7 +38,7 @@ body:
   - type: dropdown
     id: browsers
     attributes:
-      label: What browsers are you seeing the problem on?
+      label: "What browsers are you seeing the problem on?"
       multiple: true
       options:
         - Firefox
