@@ -29,8 +29,8 @@ body:
         - Contacts
         - Mail
         - cdav-library
-        - @nextcloud/calendar-availability-vue
-        - @nextcloud/calendar-js
+        - nextcloud/calendar-availability-vue
+        - nextcloud/calendar-js
     validations:
       required: true
   - type: checkboxes
