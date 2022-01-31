@@ -181,18 +181,6 @@ body:
     validations:
       required: true
   - type: textarea
-    id: nextcloud-signingstatus
-    attributes:
-      label: Nextcloud Signing status
-      description: |
-        Provide Nextcloud Signing status.
-        First, login as Admin user into your Nextcloud, then access this URL:
-        ```shell
-        https://yournextcloud.tld/index.php/settings/integrity/failed 
-        ```
-        > NOTE: This will be automatically formatted into code for better readability.
-      render: shell
-  - type: textarea
     id: nextcloud-log
     attributes:
       label: Nextcloud Logs
