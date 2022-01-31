@@ -100,18 +100,6 @@ body:
       label: Nextcloud Version
       description: |
         See admin page, e.g. 22.0.2
-  - type: checkboxes
-    id: users
-    attributes:
-      label: What user-backends are you using?
-      description: |
-        Select **all** user-backends Enabled on your Nextcloud Server.
-        _Describe in the "Additional info" section if you chose "Other"._
-      options:
-        - label: "Default user-backend _(database)_"
-        - label: "LDAP/ Active Directory"
-        - label: "SSO - SAML"
-        - label: "Other"
   - type: textarea
     id: configs
     attributes:
