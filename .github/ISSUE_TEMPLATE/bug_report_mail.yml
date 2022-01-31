@@ -115,22 +115,6 @@ body:
         > NOTE: This will be automatically formatted into code for better readability.
       render: shell
   - type: textarea
-    id: apps
-    attributes:
-      label: List of activated Apps
-      description: |
-        Provide information about your apps.
-        To get this information, execute one of the following commands on the CLI:
-        ```shell
-        sudo -u www-data php occ app:list
-        php occ app:list
-        ./occ app:list
-        ```
-        > NOTE: This will be automatically formatted into code for better readability.
-      render: shell
-    validations:
-      required: true
-  - type: textarea
     id: nextcloud-log
     attributes:
       label: Nextcloud Logs
