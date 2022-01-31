@@ -5,34 +5,28 @@ labels: ["task", "1. to develop"]
 assignees:
   - octocat
 body:
-  - type: markdown
-    attributes:
-      value: |
-        Please add your task list on the form below
   - type: textarea
     id: list-items
     attributes:
       label: Task list
-      description: List the tasks that you are planning to work on or assign to the team
+      description: Please add your task list on the form below
       placeholder: Task list
       value: "Task list"
     validations:
       required: true
-  - type: dropdown
+  - type: checkboxes
     id: version
     attributes:
-      label: App
-      description: What app does this task belong to?
+      label: List of the affected Apps
+      description: What app does this task belongs to?
       options:
-        - Calendar
-        - Calendar Resource Management
-        - Contacts
-        - Mail
-        - cdav-library
-        - nextcloud/calendar-availability-vue
-        - nextcloud/calendar-js
-    validations:
-      required: true
+        - label: Calendar
+        - label: Calendar Resource Management
+        - label: Contacts
+        - label: Mail
+        - label: cdav-library
+        - label: nextcloud/calendar-availability-vue
+        - label: nextcloud/calendar-js
   - type: checkboxes
     id: terms
     attributes:
