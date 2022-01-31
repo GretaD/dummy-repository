@@ -7,7 +7,8 @@ assignees:
 body:
   - type: markdown
     attributes:
-      value: "Please list the tasks on the form below."
+      value: |
+      Please list the tasks on the form below.
   - type: input
     id: contact
     attributes:
@@ -22,7 +23,7 @@ body:
       label: Task list
       description: List the tasks that you are planning to work on or assign to the team
       placeholder: Task list
-      value: " "
+      value: "Task list"
     validations:
       required: true
   - type: dropdown
