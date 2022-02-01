@@ -2,9 +2,13 @@ name: "Task"
 description: "Create new meta task"
 labels: ["overview", "1. to develop"]
 body:
-  - type: markdown
+  - type: textarea
+    id: list-items
     attributes:
-      value: "Task list"
+      label: Task list
+      description: Please add your task list on the form below
+    validations:
+      required: true
   - type: checkboxes
     id: apps-affected
     attributes:
