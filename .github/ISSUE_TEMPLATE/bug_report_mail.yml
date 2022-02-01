@@ -1,6 +1,5 @@
-name: "Bug report: Nextcloud Mail"
+name: "Bug"
 description: "Have you encountered a bug? Submit a report and help us improve Nextcloud Mail"
-title: "[Bug]: "
 labels: ["bug", "0. Needs triage"]
 body:
   - type: textarea
@@ -38,13 +37,13 @@ body:
       label: Mail app version
       description: |
         See apps admin page, e.g. 0.5.3
-  - type: textarea
+  - type: input
     id: mail-server-service
     attributes:
       label: Mailserver or service
       description: |
         e.g. Outlook, Yahoo, Gmail, Exchange...
-  - type: dropdown
+  - type: input
     id: system
     attributes:
       label: Operating system
@@ -94,37 +93,3 @@ body:
         - "SQlite"
         - "Oracle"
         - "Other"
-  - type: textarea
-    id: nc-server-version
-    attributes:
-      label: Nextcloud Version
-      description: |
-        See admin page, e.g. 22.0.2
-  - type: textarea
-    id: configs
-    attributes:
-      label: Configuration report
-      description: |
-        Provide information about your configuration.
-        To get this information, execute one of the following commands on the CLI:
-        ```shell
-        sudo -u www-data php occ config:list system
-        php occ config:list system
-        ./occ config:list system
-        ```
-        > NOTE: This will be automatically formatted into code for better readability.
-      render: shell
-  - type: textarea
-    id: nextcloud-log
-    attributes:
-      label: Nextcloud Logs
-      description: |
-        Provide Nextcloud logs lines.
-        Copy all contents from `data/nextcloud.log` or a RAW from `/settings/admin/logging` section:
-        > NOTE: This will be automatically formatted into code for better readability.
-      render: shell
-  - type: textarea
-    id: additional-info
-    attributes:
-      label: Additional info
-      description: Any additional information related to the issue (ex. browser console errors, software versions).
