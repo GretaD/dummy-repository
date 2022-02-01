@@ -48,12 +48,7 @@ body:
     attributes:
       label: Operating system
       description: |
-        Select operating system where Nextcloud Mail app is installed.
-        _Describe in the "Additional info" section if you chose "Other"._
-      options:
-        - "Debian/Ubuntu"
-        - "RHEL/CentOS"
-        - "Other"
+        Write the operating system where Nextcloud Mail app is installed.
   - type: dropdown
     id: php
     attributes:
