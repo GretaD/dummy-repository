@@ -1,21 +1,12 @@
-name: "Task Report:  Groupware"
+name: "Task"
 description: "Create new meta task"
-title: "[Task]: "
-labels: ["task", "1. to develop"]
-assignees:
-  - octocat
+labels: ["overview", "1. to develop"]
 body:
-  - type: textarea
-    id: list-items
+  - type: markdown
     attributes:
-      label: Task list
-      description: Please add your task list on the form below
-      placeholder: Task list
       value: "Task list"
-    validations:
-      required: true
   - type: checkboxes
-    id: version
+    id: apps-affected
     attributes:
       label: List of the affected Apps
       description: What app does this task belongs to?
@@ -27,11 +18,3 @@ body:
         - label: cdav-library
         - label: nextcloud/calendar-availability-vue
         - label: nextcloud/calendar-js
-  - type: checkboxes
-    id: terms
-    attributes:
-      label: Code of Conduct
-      description: By submitting this issue, you agree to follow our [Code of Conduct](https://nextcloud.com/contribute/code-of-conduct/)
-      options:
-        - label: I agree to follow this project's Code of Conduct
-          required: true
