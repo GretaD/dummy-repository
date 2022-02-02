@@ -10,23 +10,24 @@ body:
       render: markdown
     validations:
       required: true
-  - type: checkboxes
+  - type: dropdown
     id: components-affected
     attributes:
       label: Affected components
       description: Select the components that need to be changed.
+      multiple: true
       options:
-        - label: Calendar
-        - label: Calendar Resource Management
-        - label: Contacts
-        - label: Mail
-        - label: cdav-library
-        - label: nextcloud/calendar-availability-vue
-        - label: nextcloud/calendar-js
+        - Calendar
+        - Calendar Resource Management
+        - Contacts
+        - Mail
+        - cdav-library
+        - nextcloud/calendar-availability-vue
+        - nextcloud/calendar-js
   - type: textarea
     id: to-do
     attributes:
       label: To do
-      description: Please add your task list on the form below
+      description: Add your task list here
     validations:
       required: true
