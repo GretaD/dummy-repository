@@ -3,17 +3,18 @@ description: "Create new meta task"
 labels: ["overview", "1. to develop"]
 body:
   - type: textarea
-    id: list-items
+    id: task-descr
     attributes:
-      label: Task list
-      description: Please add your task list on the form below
+      label: Describe the task
+      description: Describe the task
+      render: markdown
     validations:
       required: true
   - type: checkboxes
-    id: apps-affected
+    id: components-affected
     attributes:
-      label: List of the affected Apps
-      description: What app does this task belongs to?
+      label: Affected components
+      description: Select the components that need to be changed.
       options:
         - label: Calendar
         - label: Calendar Resource Management
@@ -22,3 +23,10 @@ body:
         - label: cdav-library
         - label: nextcloud/calendar-availability-vue
         - label: nextcloud/calendar-js
+  - type: textarea
+    id: to-do
+    attributes:
+      label: To do
+      description: Please add your task list on the form below
+    validations:
+      required: true
