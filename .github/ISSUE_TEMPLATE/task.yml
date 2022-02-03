@@ -29,5 +29,6 @@ body:
     attributes:
       label: To do
       description: Add your task list here
+      placeholder: "- [ ]"
     validations:
       required: true
