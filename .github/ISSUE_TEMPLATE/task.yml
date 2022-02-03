@@ -30,6 +30,6 @@ body:
       label: To do
       description: Add your task list here
       value: |
-        - []
+        - [ ]
     validations:
       required: true
