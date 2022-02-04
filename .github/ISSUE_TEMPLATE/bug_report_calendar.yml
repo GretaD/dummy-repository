@@ -1,4 +1,4 @@
-name: "Bug"
+name: "Calendar Bug"
 description: "Have you encountered a bug?"
 labels: ["bug", "0. Needs triage"]
 body:
