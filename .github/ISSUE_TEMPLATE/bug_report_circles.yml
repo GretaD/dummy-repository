@@ -19,13 +19,13 @@ body:
 
         Note that Nextcloud is an open source project backed by Nextcloud GmbH. Most of our volunteers are home users and thus primarily care about issues that affect home users. Our paid engineers prioritize issues of our customers. If you are neither a home user nor a customer, consider paying somebody to fix your issue, do it yourself or become a customer.
   - type: textarea
-    id: description
+    id: description-circle
     attributes:
       label: Describe the bug
       description: |
         A clear and concise description of what the bug is.
   - type: textarea
-    id: reproduce
+    id: reproduce-circle
     attributes:
       label: Steps to reproduce
       description: |
@@ -39,7 +39,7 @@ body:
     validations:
       required: true
   - type: textarea
-    id: Expected-behavior
+    id: Expected-behavior-circle
     attributes:
       label: Expected behavior
       description: |
@@ -47,26 +47,26 @@ body:
     validations:
       required: true
   - type: textarea
-    id: actual-behavior
+    id: actual-behavior-circle
     attributes:
       label: Actual behavior
       description: Describe what you expected to happen instead.
     validations:
       required: true
   - type: input
-    id: contact-app-version
+    id: circles-app-version
     attributes:
       label: Contact version
       description: |
         See apps admin page, e.g. 0.5.3
   - type: input
-    id: system
+    id: system-circle
     attributes:
       label: Operating system
       description: |
         Write down the operating system where Nextcloud Mail app is installed.
   - type: dropdown
-    id: php
+    id: php-circle
     attributes:
       label: PHP engine version
       description: |
@@ -79,7 +79,7 @@ body:
         - "PHP 8.1"
         - "Other"
   - type: dropdown
-    id: webserver
+    id: webserver-circle
     attributes:
       label: Web server
       description: |
@@ -91,7 +91,7 @@ body:
         - "Lighttpd"
         - "Other"
   - type: dropdown
-    id: database
+    id: database-circle
     attributes:
       label: Database
       description: |
@@ -105,13 +105,13 @@ body:
         - "Oracle"
         - "Other"
   - type: input
-    id: system
+    id: system-circle
     attributes:
       label: Operating system
       description: |
         Write down the operating system where Nextcloud Contacts app is installed.
   - type: textarea
-    id: apps
+    id: apps-circle
     attributes:
       label: List of activated Apps
       description: |
@@ -127,7 +127,7 @@ body:
     validations:
       required: true
   - type: textarea
-    id: nextcloud-signingstatus
+    id: nextcloud-signingstatus-circle
     attributes:
       label: Nextcloud Signing status
       description: |
@@ -139,7 +139,7 @@ body:
         > NOTE: This will be automatically formatted into code for better readability.
       render: shell
   - type: textarea
-    id: configs
+    id: configs-circle
     attributes:
       label: Configuration report
       description: |
@@ -153,7 +153,7 @@ body:
         > NOTE: This will be automatically formatted into code for better readability.
       render: shell
   - type: textarea
-    id: console-log
+    id: console-log-circle
     attributes:
       label: Console log
       description: |
@@ -183,7 +183,7 @@ body:
         2. Click on the “console” tab.
       render: shell
   - type: textarea
-    id: additional-info
+    id: additional-info-circle
     attributes:
       label: Additional info
       description: Any additional information related to the issue (ex. browser console errors, software versions).
