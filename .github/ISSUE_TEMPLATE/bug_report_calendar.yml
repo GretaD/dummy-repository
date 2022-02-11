@@ -5,7 +5,8 @@ body:
   - type: markdown
     attributes:
       value: |
-        Thanks for reporting issues back to Nextcloud! This is the issue tracker of Nextcloud, if you have any support question please check out https://nextcloud.com/support
+        ### 👍Thanks for reporting issues back to Nextcloud! 
+        This is the issue tracker of Nextcloud, if you have any support question please check out https://nextcloud.com/support
         This is the bug tracker for the web-calendar component. Find other components at https://github.com/nextcloud/
         Everything that is related to the CalDAV server, meaning it does not only affect the web-calendar but also your mobile and desktop clients, belongs in the Server repository: https://github.com/nextcloud/server
         For reporting potential security issues please see https://nextcloud.com/security/
