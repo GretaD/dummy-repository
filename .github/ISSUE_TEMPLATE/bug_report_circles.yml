@@ -56,7 +56,7 @@ body:
   - type: input
     id: circles-app-version
     attributes:
-      label: Contact version
+      label: Circle version
       description: |
         See apps admin page, e.g. 0.5.3
   - type: input
@@ -64,7 +64,7 @@ body:
     attributes:
       label: Operating system
       description: |
-        Write down the operating system where Nextcloud Mail app is installed.
+        Write down the operating system where Nextcloud Circle app is installed.
   - type: dropdown
     id: php-circle
     attributes:
@@ -104,12 +104,6 @@ body:
         - "SQLite"
         - "Oracle"
         - "Other"
-  - type: input
-    id: system-circle
-    attributes:
-      label: Operating system
-      description: |
-        Write down the operating system where Nextcloud Contacts app is installed.
   - type: textarea
     id: apps-circle
     attributes:
