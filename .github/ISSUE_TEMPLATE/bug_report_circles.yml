@@ -157,22 +157,18 @@ body:
         - Alternative method:
             1. Press either CTRL + SHIFT + I or F12 to open the Developer Tools.
             2. Click the “console” tab.
-        
         #### Safari
         - Press CTRL + ALT + I to open the Web Inspector.
         - See Chrome’s step 2. (Chrome and Safari have pretty much identical dev tools.)
-        
-        #### IE9
+        ### IE9
         1. Press F12 to open the developer tools.
         2. Click the “console” tab.
-        
-        #### Firefox
+        ### Firefox
         - Press CTRL + SHIFT + K to open the Web console (COMMAND + SHIFT + K on Macs).
         - or, if Firebug is installed (recommended):
             1. Press F12 to open Firebug.
             2. Click on the “console” tab.
-        
-        #### Opera
+        ### Opera
         1. Press CTRL + SHIFT + I to open Dragonfly.
         2. Click on the “console” tab.
         render: shell
