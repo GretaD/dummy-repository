@@ -46,6 +46,9 @@ body:
         Tell us what happens instead
     validations:
       required: true
+  - type: markdown
+    attributes:
+      value: "### Calendar app"
   - type: textarea
     id: calendar-app-version
     attributes:
@@ -56,27 +59,28 @@ body:
     id: CalDAV-clients-used
     attributes:
       label: CalDAV-clients used
-      description: |
-        e.g. Thunderbird Lightning, DAVx5, Evolution, macOS Calendar, etc...
+      description: e.g. Thunderbird Lightning, DAVx5, Evolution, macOS Calendar, etc...
+  - type: markdown
+    attributes:
+      value: "### Client configuration"
   - type: input
-    id: system
+    id: browser
     attributes:
-      label: Operating system
-      description: |
-        Write the operating system where Nextcloud Calendar app is installed.
-  - type: dropdown
-    id: php
+      label: Browser
+      description: e.g Firefox 56
+  - type: input
+    id: client-os
     attributes:
-      label: PHP engine version
-      description: |
-        Select PHP engine version serving Nextcloud Server.
-        _Describe in the "Additional info" section if you chose "Other"._
-      options:
-        - "PHP 7.3"
-        - "PHP 7.4"
-        - "PHP 8.0"
-        - "PHP 8.1"
-        - "Other"
+      label: Client operating system
+      description: e.g. Arch Linux
+  - type: markdown
+    attributes:
+      value: "### Server configuration"
+  - type: input
+    id: server-os
+    attributes:
+      label: Server operating system
+      description: e.g. Arch Linux
   - type: dropdown
     id: webserver
     attributes:
@@ -85,9 +89,8 @@ body:
         Select Webserver serving Nextcloud Server.
         _Describe in the "Additional info" section if you chose "Other"._
       options:
-        - "Apache (supported)"
+        - "Apache"
         - "Nginx"
-        - "Lighttpd"
         - "Other"
   - type: dropdown
     id: database
@@ -104,25 +107,38 @@ body:
         - "Oracle"
         - "Other"
   - type: dropdown
+    id: php
+    attributes:
+      label: PHP engine version
+      description: |
+        Select PHP engine version serving Nextcloud Server.
+        _Describe in the "Additional info" section if you chose "Other"._
+      options:
+        - "PHP 7.3"
+        - "PHP 7.4"
+        - "PHP 8.0"
+        - "PHP 8.1"
+        - "Other"
+  - type: textarea
+    id: nextcloud-version
+    attributes:
+      label: Nextcloud version
+      description: see admin page, e.g. 24.0.0
+  - type: dropdown
     id: fresh-install-update
     attributes:
       label: Updated from an older installed version or fresh install
       options:
-        - "Older installed version"
-        - "Fresh install version"
+        - "Updated from an older version"
+        - "Fresh install"
   - type: textarea
     id: list-active-apps
     attributes:
       label: List of activated apps
       description: |
-        Provide information about your configuration.
-        To get this information, execute one of the following commands on the CLI:
-        ```shell
         If you have access to your command line run e.g.:
         sudo -u www-data php occ app:list
         from within your instance's installation folder
-        ```
-        > NOTE: This will be automatically formatted into code for better readability.
       render: Text
   - type: textarea
     id: config
@@ -130,14 +146,12 @@ body:
       label: Nextcloud configuration
       description: |
         Provide information about your configuration.
-        To get this information, execute one of the following commands on the CLI. Make sure to remove all sensitive content such as passwords. (e.g. database password, passwordsalt, secret, smtp password:
-        ```shell
-        If you have access to your command line run e.g.:
         sudo -u www-data php occ config:list system
-        from within your instance's installation folder
-        ```
-        > NOTE: This will be automatically formatted into code for better readability.
+        from within your instance's installation folder.
       render: Text
+  - type: markdown
+    attributes:
+      value: "### Logs"
   - type: textarea
     id: log
     attributes:
