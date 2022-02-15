@@ -5,25 +5,16 @@ body:
   - type: markdown
     attributes:
       value: |
-        Thanks for reporting issues back to Nextcloud! This is the issue tracker of Nextcloud, if you have any support question please check out https://nextcloud.com/support
-
-        To make it possible for us to help you please fill out below information carefully.
-        You can also use the Issue Template application to prefill most of the required information: https://apps.nextcloud.com/apps/issuetemplate
+        ### 👍Thanks for reporting issues back to Nextcloud!
+        This is the issue tracker of Nextcloud, if you have any support question please check out [the support on our website](https://nextcloud.com/support).
 
         ⚠ Please report only issues corresponding to the contacts app for Nextcloud ⚠
 
-        Migration and CardDAV issues belong in the server repo!
-        https://github.com/nextcloud/server/issues
+        Migration and CardDAV issues belong in the [server repo](https://github.com/nextcloud/server/issues)!
 
-        If you have any questions, head over to https://help.nextcloud.com/c/apps/contacts
+        If you have any questions, head over to the [forum](https://help.nextcloud.com/c/apps/contacts)!
 
         Note that Nextcloud is an open source project backed by Nextcloud GmbH. Most of our volunteers are home users and thus primarily care about issues that affect home users. Our paid engineers prioritize issues of our customers. If you are neither a home user nor a customer, consider paying somebody to fix your issue, do it yourself or become a customer.
-  - type: textarea
-    id: description-circle
-    attributes:
-      label: Describe the bug
-      description: |
-        A clear and concise description of what the bug is.
   - type: textarea
     id: reproduce-circle
     attributes:
@@ -53,20 +44,41 @@ body:
       description: Describe what you expected to happen instead.
     validations:
       required: true
-  - type: input
-    id: circles-app-version
+  - type: markdown
     attributes:
-      label: Circle version
-      description: |
-        See apps admin page, e.g. 0.5.3
+      value: "## Server configuration"
   - type: input
-    id: system-circle
+    id: server-os
     attributes:
-      label: Operating system
-      description: |
-        Write down the operating system where Nextcloud Circle app is installed.
+      label: Server operating system
+      description: e.g. Arch Linux
   - type: dropdown
-    id: php-circle
+    id: webserver
+    attributes:
+      label: Web server
+      description: |
+        Select Webserver serving Nextcloud Server.
+        _Describe in the "Additional info" section if you chose "Other"._
+      options:
+        - "Apache"
+        - "Nginx"
+        - "Other"
+  - type: dropdown
+    id: database
+    attributes:
+      label: Database engine version
+      description: |
+        Select Database engine serving Nextcloud Server.
+        _Describe in the "Additional info" section if you chose "Other"._
+      options:
+        - "MySQL"
+        - "MariaDB"
+        - "PostgreSQL"
+        - "SQlite"
+        - "Oracle"
+        - "Other"
+  - type: dropdown
+    id: php
     attributes:
       label: PHP engine version
       description: |
@@ -78,80 +90,95 @@ body:
         - "PHP 8.0"
         - "PHP 8.1"
         - "Other"
+  - type: input
+    id: nextcloud-version
+    attributes:
+      label: Nextcloud version
+      description: see admin page, e.g. 4.0.0
   - type: dropdown
-    id: webserver-circle
+    id: fresh-install-update
     attributes:
-      label: Web server
-      description: |
-        Select Webserver serving Nextcloud Server.
-        _Describe in the "Additional info" section if you chose "Other"._
+      label: Updated from an older installed version or fresh install
       options:
-        - "Apache (supported)"
-        - "Nginx"
-        - "Lighttpd"
-        - "Other"
-  - type: dropdown
-    id: database-circle
-    attributes:
-      label: Database
-      description: |
-        Select Database engine serving Nextcloud Server.
-        _Describe in the "Additional info" section if you chose "Other"._
-      options:
-        - "MySQL"
-        - "MariaDB"
-        - "PostgreSQL"
-        - "SQLite"
-        - "Oracle"
-        - "Other"
+        - "Updated from an older version"
+        - "Fresh install"
   - type: textarea
-    id: apps-circle
+    id: signin-status
     attributes:
-      label: List of activated Apps
+      label: Signing status
       description: |
-        Provide information about your apps.
-        To get this information, execute one of the following commands on the CLI:
-        ```shell
-        sudo -u www-data php occ app:list
-        php occ app:list
-        ./occ app:list
-        ```
-        > NOTE: This will be automatically formatted into code for better readability.
-      render: shell
-    validations:
-      required: true
+        Login as admin user into your Nextcloud and access
+        http://example.com/index.php/settings/integrity/failed
+        paste the results here
+      render: Text
   - type: textarea
-    id: nextcloud-signingstatus-circle
+    id: list-active-apps
     attributes:
-      label: Nextcloud Signing status
+      label: List of activated apps
       description: |
-        Provide Nextcloud Signing status.
-        First, login as Admin user into your Nextcloud, then access this URL:
-        ```shell
-        https://yournextcloud.tld/index.php/settings/integrity/failed
-        ```
-        > NOTE: This will be automatically formatted into code for better readability.
-      render: shell
+        If you have access to your command line run e.g.:
+        ``sudo -u www-data php occ app:list``
+        from within your instance's installation folder
+      render: Text
   - type: textarea
-    id: configs-circle
+    id: config
     attributes:
-      label: Configuration report
+      label: Nextcloud configuration
       description: |
         Provide information about your configuration.
-        To get this information, execute one of the following commands on the CLI:
-        ```shell
-        sudo -u www-data php occ config:list system
-        php occ config:list system
-        ./occ config:list system
-        ```
-        > NOTE: This will be automatically formatted into code for better readability.
-      render: shell
-  - type: textarea
-    id: console-log-circle
+        ``sudo -u www-data php occ config:list system``
+        from within your instance's installation folder.
+      render: Text
+  - type: markdown
     attributes:
-      label: Console log
+      value: "## Client configuration"
+  - type: input
+    id: browser
+    attributes:
+      label: Browser
+      description: e.g Firefox 56
+  - type: input
+    id: client-os
+    attributes:
+      label: Client operating system
+      description: e.g. Arch Linux
+  - type: input
+    id: carddav-clients
+    attributes:
+      label: CardDAV-clients
+  - type: markdown
+    attributes:
+      value: "## Logs"
+  - type: textarea
+    id: log
+    attributes:
+      label: Web server error log
       description: |
-        How to access your browser console. Please, use the browser log you faced the error.
+        Insert your webserver log here
+      render: Text
+  - type: textarea
+    id: log-file
+    attributes:
+      label: Nextcloud log
+      description: |
+        Insert your data/nextcloud.log file here
+      render: Text
+  - type: textarea
+    id: browser-log
+    attributes:
+      label: Browser log
+      description: |
+        Insert your browser log here, this could for example include:
+        a) The javascript console log
+        b) The network log
+        c) ...
+      render: Text
+  - type: textarea
+    id: browser-log-circle
+    attributes:
+      label: Browser log
+      description: |
+        Below you can see how to access your browser console. Please, use the browser log where you faced the error.
         ### Chrome
         - Press either CTRL + SHIFT + J to open the “console” tab of the Developer Tools.
         - Alternative method:
@@ -171,9 +198,4 @@ body:
         ### Opera
         1. Press CTRL + SHIFT + I to open Dragonfly.
         2. Click on the “console” tab.
-        render: shell
-  - type: textarea
-    id: additional-info-circle
-    attributes:
-      label: Additional info
-      description: Any additional information related to the issue (ex. browser console errors, software versions).
+      render: Text
