@@ -48,8 +48,8 @@ body:
       required: true
   - type: markdown
     attributes:
-      value: "### Calendar app"
-  - type: textarea
+      value: "## Calendar app"
+  - type: input
     id: calendar-app-version
     attributes:
       label: Calendar app version
@@ -62,7 +62,7 @@ body:
       description: e.g. Thunderbird Lightning, DAVx5, Evolution, macOS Calendar, etc...
   - type: markdown
     attributes:
-      value: "### Client configuration"
+      value: "## Client configuration"
   - type: input
     id: browser
     attributes:
@@ -75,7 +75,7 @@ body:
       description: e.g. Arch Linux
   - type: markdown
     attributes:
-      value: "### Server configuration"
+      value: "## Server configuration"
   - type: input
     id: server-os
     attributes:
@@ -119,7 +119,7 @@ body:
         - "PHP 8.0"
         - "PHP 8.1"
         - "Other"
-  - type: textarea
+  - type: input
     id: nextcloud-version
     attributes:
       label: Nextcloud version
@@ -146,12 +146,12 @@ body:
       label: Nextcloud configuration
       description: |
         Provide information about your configuration.
-        sudo -u www-data php occ config:list system
+        ``sudo -u www-data php occ config:list system``
         from within your instance's installation folder.
       render: Text
   - type: markdown
     attributes:
-      value: "### Logs"
+      value: "## Logs"
   - type: textarea
     id: log
     attributes:
