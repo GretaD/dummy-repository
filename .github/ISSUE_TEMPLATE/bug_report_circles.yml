@@ -157,7 +157,7 @@ body:
         - Alternative method:
             1. Press either CTRL + SHIFT + I or F12 to open the Developer Tools.
             2. Click the “console” tab.
-        #### Safari
+        ### Safari
         - Press CTRL + ALT + I to open the Web Inspector.
         - See Chrome’s step 2. (Chrome and Safari have pretty much identical dev tools.)
         ### IE9
