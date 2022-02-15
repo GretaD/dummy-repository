@@ -137,7 +137,7 @@ body:
       label: List of activated apps
       description: |
         If you have access to your command line run e.g.:
-        sudo -u www-data php occ app:list
+        ``sudo -u www-data php occ app:list``
         from within your instance's installation folder
       render: Text
   - type: textarea
